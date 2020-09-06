@@ -1,0 +1,275 @@
+//	Unit Conversion
+//  
+//  Converts rem/px units into rem and px ( 2 seperate properties with different unit type )
+//  
+//  {integer} $baseFont: The base font size ( Make sure to change if :root (--basefont) size is different )
+//  					Default size: 16
+//  					usage as below:
+//  @include Unit(width, 20px);
+//  	Converts to:
+//  			width: 20px;
+//  			width: 1.25rem;
+//
+//  @include Unit(padding, 24px 2rem);
+//  	Converts to:
+//  			padding: 24px 36px;
+//  			padding: 1.5rem 2rem;
+
+$baseFont: 16;
+//Rem Font Sizing
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+@mixin Unit($property, $values) {
+	$px: ();
+	$rem: ();
+	@each $value in $values {
+		@if $value==0 or $value==auto {
+			$px: append($px, $value);
+			$rem: append($rem, $value);
+		}
+		@else {
+			$unit: unit($value);
+			$val: parseInt($value);
+			@if $unit=="px" {
+				$px: append($px, $value);
+				$rem: append($rem, ($val / $baseFont + rem));
+			}
+			@if $unit=="rem" {
+				$px: append($px, ($val * $baseFont + px));
+				$rem: append($rem, $value);
+			}
+		}
+	}
+	@if $px==$rem {
+		#{$property}: $px;
+	}
+	@else {
+		// #{$property}: $px;
+		#{$property}: $rem;
+	}
+}
+
+// Form Placeholder
+@mixin placeholder($content) {
+	@if $content==combine {
+		&::-webkit-input-placeholder {
+			@content
+		}
+		&:-moz-placeholder {
+			@content
+		}
+		&::-moz-placeholder {
+			@content
+		}
+		&:-ms-input-placeholder {
+			@content
+		}
+	}
+	@else if $content==extend {
+		::-webkit-input-placeholder {
+			@content
+		}
+		:-moz-placeholder {
+			@content
+		}
+		::-moz-placeholder {
+			@content
+		}
+		:-ms-input-placeholder {
+			@content
+		}
+	}
+}
+
+// Animation
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes $animation-name {
+		@content;
+	}
+	@-moz-keyframes $animation-name {
+		@content;
+	}
+	@-o-keyframes $animation-name {
+		@content;
+	}
+	@keyframes $animation-name {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};
+}
+
+// Breakpoints
+$xxs: 320px;
+$xs: 480px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+$xl: 1366px;
+$xxl: 1600px;
+$hd: 1920px;
+
+// Media Queries
+@mixin breakpoint($canvas) {
+	@if $canvas==xxs {
+		@media only screen and (min-width: $xxs) {
+			@content;
+		}
+	}
+	@else if $canvas==xxs-max {
+		@media only screen and (max-width: $xxs - 1) {
+			@content;
+		}
+	}
+	@else if $canvas==xs {
+		@media only screen and (min-width: $xs) {
+			@content;
+		}
+	}
+	@else if $canvas==xs-max {
+		@media only screen and (max-width: $xs - 1) {
+			@content;
+		}
+	}
+	@else if $canvas==sm {
+		@media only screen and (min-width: $sm) {
+			@content;
+		}
+	}
+	@else if $canvas==sm-max {
+		@media only screen and (max-width: $sm - 1) {
+			@content;
+		}
+	}
+	@else if $canvas==md {
+		@media only screen and (min-width: $md) {
+			@content;
+		}
+	}
+	@else if $canvas==md-max {
+		@media only screen and (max-width: $md - 1) {
+			@content;
+		}
+	}
+	@else if $canvas==lg {
+		@media only screen and (min-width: $lg) {
+			@content;
+		}
+	}
+	@else if $canvas==lg-max {
+		@media only screen and (max-width: $lg - 1) {
+			@content;
+		}
+	}
+	@else if $canvas==xl {
+		@media only screen and (min-width: $xl) {
+			@content;
+		}
+	}
+	@else if $canvas==xl-max {
+		@media only screen and (max-width: $xl - 1) {
+			@content;
+		}
+	}
+	@else if $canvas==xxl {
+		@media only screen and (min-width: $xxl) {
+			@content;
+		}
+	}
+	@else if $canvas==xxl-max {
+		@media only screen and (max-width: $xxl - 1) {
+			@content;
+		}
+	}
+	@else if $canvas==hd {
+		@media only screen and (min-width: $hd) {
+			@content;
+		}
+	}
+	@else if $canvas==hd-max {
+		@media only screen and (max-width: $hd - 1) {
+			@content;
+		}
+	}
+	@else if $canvas==ipad-portrait {
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+			@content;
+		}
+	}
+	@else if $canvas==tablet-landscape {
+		@media only screen and (max-height: 600px) and (orientation: landscape) {
+			html.tablet & {
+				@content;
+			}
+		}
+	} // Portrait and Landscape
+	@else if $canvas==ipad-3-and-4 {
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+			@content;
+		}
+	}
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Typography Mixin, for better usage refer to typography
+// https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+	@if $index {
+		@return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+	@return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// https://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/
+@mixin rowMachine($numPerRow, $margin) {
+  float: left;
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $margin;
+    margin-right: $margin;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,39 @@
+
+@font-face {
+    font-family: 'Inter Light';
+    font-style:  normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(../fonts/Inter-ExtraLight.woff2?v=3.15) format("woff2"),
+         url(../fonts/Inter-ExtraLight.woff?v=3.15) format("woff");
+  }
+
+@font-face {
+    font-family: 'Inter Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/Inter-Regular.woff2?v=3.15) format("woff2"),
+        url(../fonts/Inter-Regular.woff?v=3.15) format("woff");
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/Inter-Bold.woff2?v=3.15) format("woff2"),
+        url(../fonts/Inter-Bold.woff?v=3.15) format("woff");
+}
+
+%light {
+    font-family: "Inter Light", Verdana, sans-serif;
+}
+
+%regular {
+    font-family: "Inter Regular", Verdana, sans-serif;
+}
+
+%bold {
+    font-family: "Inter Bold", Verdana, sans-serif;
+}

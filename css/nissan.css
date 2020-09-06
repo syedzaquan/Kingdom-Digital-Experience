@@ -1,0 +1,221 @@
+@font-face {
+  font-family: 'nissan_brandlight';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NissanBrandW01-Light.eot);
+  src: url(../fonts/NissanBrandW01-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NissanBrandW01-Light.woff) format("woff"), url(../fonts/NissanBrandW01-Light.ttf) format("truetype"), url(../fonts/NissanBrandW01-Light.svg#nissanproreg-webfont) format("svg"); }
+
+@font-face {
+  font-family: 'nissan_brandbold';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NissanBrandW01-Bold.eot);
+  src: url(../fonts/NissanBrandW01-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NissanBrandW01-Bold.woff) format("woff"), url(../fonts/NissanBrandW01-Bold.ttf) format("truetype"), url(../fonts/NissanBrandW01-Bold.svg#nissanproreg-webfont) format("svg"); }
+
+@font-face {
+  font-family: 'nissan_brandregular';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NissanBrandW01-Regular.eot);
+  src: url(../fonts/NissanBrandW01-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NissanBrandW01-Regular.woff) format("woff"), url(../fonts/NissanBrandW01-Regular.ttf) format("truetype"), url(../fonts/NissanBrandW01-Regular.svg#nissanproreg-webfont) format("svg"); }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?ptcktv");
+  src: url("../fonts/icomoon.eot?ptcktv#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?ptcktv") format("truetype"), url("../fonts/icomoon.woff?ptcktv") format("woff"), url("../fonts/icomoon.svg?ptcktv#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.text-thin {
+  font-family: "nissan_brandlight", Verdana, sans-serif; }
+
+body, p, ul, .text-regular {
+  font-family: "nissan_brandregular", Verdana, sans-serif; }
+
+.text-bold {
+  font-family: "nissan_brandbold", Verdana, sans-serif; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-weight: normal;
+  background-color: #f7f7f7;
+  -webkit-font-smoothing: antialiased; }
+
+.no-scroll {
+  position: relative;
+  overflow-x: hidden; }
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: 0px;
+  text-transform: none !important; }
+
+h1 a,
+  h2 a,
+  h3 a {
+    color: white; }
+
+h1 a.active,
+    h2 a.active,
+    h3 a.active {
+      color: #d5b981; }
+
+@media (max-width: 1366px) {
+  h1 {
+    font-size: 2.25rem; } }
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem; } }
+
+@media (max-width: 1366px) {
+  h2 {
+    font-size: 1.75rem; } }
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 1.5rem; } }
+
+@media (max-width: 1366px) {
+  h3 {
+    font-size: 1.55rem; } }
+
+@media (max-width: 767px) {
+  h3 {
+    font-size: 1.25rem; } }
+
+h4 {
+  font-size: 20.8px;
+  font-size: 1.3rem; }
+
+@media (max-width: 1366px) {
+    h4 {
+      font-size: 1.3rem; } }
+
+@media (max-width: 767px) {
+    h4 {
+      font-size: 1.3rem; } }
+
+h4,
+h5,
+h6 {
+  letter-spacing: 0px; }
+
+p {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
+
+.hide-desktop {
+  display: none; }
+
+@media (max-width: 1024px) {
+    .hide-desktop {
+      display: block; } }
+
+.hide-mobile {
+  display: block; }
+
+@media (max-width: 1024px) {
+    .hide-mobile {
+      display: none; } }
+
+.text-white {
+  color: white !important; }
+
+.text-black {
+  color: black !important; }
+
+.text-red {
+  color: #f43b3f; }
+
+.text-medium-red {
+  color: #c81533; }
+
+.text-primary {
+  color: #d5b981 !important; }
+
+.text-primary h1,
+  .text-primary h2,
+  .text-primary h3 {
+    color: #d5b981 !important; }
+
+.text-xl {
+  font-size: 64px;
+  font-size: 4rem; }
+
+@media (max-width: 1600px) {
+    .text-xl {
+      font-size: 3.6rem; } }
+
+@media (max-width: 1366px) {
+    .text-xl {
+      font-size: 3.6rem; } }
+
+@media (max-width: 1200px) {
+    .text-xl {
+      font-size: 2.7rem; } }
+
+@media (max-width: 768px) {
+    .text-xl {
+      font-size: 2rem; } }
+
+.text-lg {
+  font-size: 48px;
+  font-size: 3rem; }
+
+@media (max-width: 768px) {
+    .text-lg {
+      font-size: 1.5rem; } }
+
+@media (max-width: 480px) {
+    .text-lg {
+      font-size: 1rem; } }
+
+.text-md {
+  font-size: 40px;
+  font-size: 2.5rem; }
+
+@media (max-width: 1440px) {
+    .text-md {
+      font-size: 2rem; } }
+
+@media (max-width: 1024px) {
+    .text-md {
+      font-size: 1.5rem; } }
+
+@media (max-width: 768px) {
+    .text-md {
+      font-size: 1rem; } }
+
+.text-sm {
+  font-size: 16px;
+  font-size: 1rem; }
+
+@media (max-width: 768px) {
+    .text-sm {
+      font-size: 0.8rem; } }
+
+.black-bg {
+  background-color: #000; }
+
+.experiences-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 1366px) {
+    .experiences-container {
+      width: 1200px; } }
+
+@media (min-width: 1600px) {
+    .experiences-container {
+      width: 1400px; } }
+
+nav .logo-container {
+  max-height: 64px; }

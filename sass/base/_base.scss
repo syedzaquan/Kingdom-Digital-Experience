@@ -1,0 +1,256 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    //@extend %helveticaneue;
+    @extend %regular;
+    font-weight: normal;
+    background-color: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.no-scroll {
+    position: relative;
+    overflow-x: hidden;
+}
+
+// Large Title
+h1,
+h2,
+h3 {
+    // @extend %bold;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-transform: none !important;
+
+    a {
+        color: white;
+
+        &.active {
+            color: $primary-color;
+        }
+    }
+}
+
+// Large Title - Responsive*
+h1 {
+    @media (max-width: 1366px) {
+        // 2.5rem Desktop
+        font-size: calc(2.5rem - 0.25rem);
+    }
+
+    @media (max-width: 767px) {
+        // 2.5rem Desktop
+        font-size: calc(2.5rem - 1rem);
+    }
+}
+
+h2 {
+    @media (max-width: 1366px) {
+        // 2.5rem Desktop
+        font-size: calc(2rem - 0.25rem);
+    }
+
+    @media (max-width: 767px) {
+        // 2rem Desktop
+        font-size: calc(2rem - 0.5rem);
+    }
+}
+
+h3 {
+    @media (max-width: 1366px) {
+        // 2.5rem Desktop
+        font-size: calc(1.75rem - 0.2rem);
+    }
+
+    @media (max-width: 767px) {
+        // 1.75rem Desktop
+        font-size: calc(1.75rem - 0.5rem);
+    }
+}
+
+h4 {
+    font-size: 1.3rem;
+
+    @media (max-width: 1366px) {
+        // 2.5rem Desktop
+        font-size: calc(1.5rem - 0.2rem);
+    }
+
+    @media (max-width: 767px) {
+        // 1.5rem Desktop
+        font-size: calc(1.5rem - 0.2rem);
+    }
+}
+
+h4,
+h5,
+h6 {
+    // @extend %bold;
+    letter-spacing: 0px;
+}
+
+p {
+    @extend %regular;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    @extend %regular;
+}
+
+.text-regular {
+    @extend %regular;
+}
+
+.text-bold {
+    @extend %bold;
+}
+
+.text-thin {
+    @extend %light;
+}
+
+.hide-desktop {
+    display: none;
+
+    @media (max-width: 1024px) {
+        display: block;
+    }
+}
+
+.hide-mobile {
+    display: block;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+// text color
+.text-white {
+    color: white !important;
+}
+
+.text-black {
+    color: black !important;
+}
+
+.text-red {
+    color: #f43b3f;
+}
+
+.text-medium-red {
+    color: #c81533;
+}
+
+.text-kd {
+    color: #864796;
+}
+
+.text-primary {
+    color: $primary-color !important;
+
+    h1,
+    h2,
+    h3 {
+        color: $primary-color !important;
+    }
+}
+
+.text-xl {
+    font-size: 4rem;
+
+    @media (max-width: 1600px) {
+        font-size: 3.6rem;
+    }
+
+    @media (max-width: 1366px) {
+        font-size: 3.6rem;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 2.7rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+
+}
+
+.text-lg {
+    font-size: 3rem;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+    }
+}
+
+.text-md {
+    font-size: 2.5rem;
+
+    @media (max-width: 1440px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+}
+
+.text-sm {
+    font-size: 1rem;
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+    }
+}
+
+.black-bg {
+    background-color: #000;
+}
+
+.experiences-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 1366px) {
+        width: 1200px;
+    }
+
+    @media (min-width: 1600px) {
+        width: 1400px;
+    }
+}
+
+.experiences-tag {
+    &:before {
+        position: absolute;
+        content: "'";
+        color: #864796;
+        margin-left: -10px;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        background-color: #864796;
+        font-size: 1rem;
+        bottom: 13px;
+        width: 16px;
+        height: 7px;
+    }
+}

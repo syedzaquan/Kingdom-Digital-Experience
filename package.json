@@ -1,0 +1,60 @@
+{
+  "name": "developerpackage",
+  "version": "1.0.0",
+  "description": "Project workflow to simplify Front-end developers.",
+  "main": "Gulpfile.js",
+  "keywords": [
+    "Gulp",
+    "Sass",
+    "PostCSS",
+    "jQuery",
+    "Bootstrap",
+    "Font-Awesome",
+    "Libraries",
+    "BrowserSync",
+    "Minify",
+    "MinifyCSS"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.5.1",
+    "npm": "^6.14.7"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.6",
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.26.12",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minifier": "^1.2.2",
+    "gulp-postcss": "^6.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-strip-comments": "^2.5.1",
+    "gulp-strip-json-comments": "^2.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.8",
+    "import-glob-loader": "^1.1.0",
+    "jquery-match-height": "^0.7.2",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-calc": "^6.0.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-px2rem": "^0.3.0",
+    "postcss-reporter": "^5.0.0",
+    "postcss-url": "^7.1.2",
+    "precss": "^2.0.0",
+    "slick-carousel": "^1.7.1"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Kingdom Digital <developer@kingdomdigital.com.my>",
+  "license": "ISC"
+}
