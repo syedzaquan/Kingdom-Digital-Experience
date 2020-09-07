@@ -175,7 +175,7 @@ ul {
     }
 
     @media (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
 }
@@ -252,5 +252,19 @@ ul {
         bottom: 13px;
         width: 16px;
         height: 7px;
+
+        @media (max-width: 768px) {
+            bottom: 8px;
+            margin-left: 3px;
+            width: 11px;
+            height: 4px;
+        }
+    }
+}
+
+.col-xxl-3 {
+    @media (min-width: 1440px) {
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 }
